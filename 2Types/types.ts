@@ -39,3 +39,34 @@ notSure=true;
 console.log(notSure)
 export {}
 
+//Type aliases: A way to create a new name for a type.
+
+type Product={
+    name: string;
+    price: number;
+    quentity: number;
+    isPaid: boolean;
+}
+
+let product1:Product={
+    name: "shoes",
+    price: 2000,
+    quentity: 10,
+    isPaid: false,
+}
+
+let product2:Product={
+    name: "bags",
+    price: 3000,
+    quentity: 20,
+    isPaid: false,
+}
+
+// now calculate the total price of product
+
+let totalPrice1=(product1:Product)=>{
+  return `the total price of ${product1.name} is ${product1.price*product1.quentity}`
+}
+
+console.log(totalPrice1(product1))
+

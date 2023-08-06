@@ -35,4 +35,10 @@ Here are some of the basic and advanced types in TypeScript:
 (You usually want to avoid this, though, because any isn’t type-checked. Use the compiler flag noImplicitAny to flag any implicit any as an error.
  )
 
-5:  
+5: Void: Mostly used in function return types to represent the lack of return values.
+
+6: Never: The never type in TypeScript represents a type of values that never occur. It's the return type for functions that never return or always throw an exception.
+
+7: Type aliases: A way to create a new name for a type.
+
+
