@@ -70,3 +70,73 @@ let totalPrice1=(product1:Product)=>{
 
 console.log(totalPrice1(product1))
 
+
+//Union types: Used to define a type that could be one of several types.
+// more recomanded to use union type instent of type Any.
+
+let a:number | string;
+
+a=5;
+a="ali"
+// a=true this will not allow
+
+// example with Array
+
+let arr1:string[]=["saleem","ali"]; //this will only allow string type array
+console.log(arr1)
+
+let arr2:number[]=[1,2]; //this will only allow number type array
+console.log(arr2)
+
+let arr3:(string |number | boolean)[]=["saleem",1,true];
+console.log(arr3);
+
+// Tuple: Represents an array where the type of certain elements is known.
+
+let x: [string, number];
+x = ["hello", 10]; // OK
+// x = [10, "hello"]; // Error
+
+x.push("saleem");
+x.push("ali"); //so now this is not following the protocals which we give above its allowing to add more values while we just restrict above to only 2 values will be in tuple.
+
+
+
+// enums:  commonly used when you want to represent values and choose one value from multiple options.
+
+// use const with enum to reduce code when it compile to js.
+
+const enum Role {
+    admin="admin"
+    ,user="admin"
+}
+
+type LoginAccess ={
+  name: string,
+  email: string,
+  role: string,
+}
+
+
+const user1:LoginAccess={
+    name: "saleem",
+    email: "saleem@gmail.com",
+    role: Role.admin
+}
+
+let user2:LoginAccess={
+    name: "ali",
+    email: "ali@gmail.com",
+    role: Role.user
+}
+
+let isAdmin=(Role:LoginAccess)=>{
+const { name,role}=Role;
+return role=== "admin" && name==="saleem" ?` ${name} is allow to edit`: `${name} is not allow to edit`
+}
+
+
+console.log(isAdmin(user1));
+console.log(isAdmin(user2));
+
+export {}

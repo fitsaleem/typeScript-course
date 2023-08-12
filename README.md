@@ -41,4 +41,6 @@ Here are some of the basic and advanced types in TypeScript:
 
 7: Type aliases: A way to create a new name for a type.
 
+8: Enum:  commonly used when you want to represent values and choose one value from multiple options. In typescript when enum constant are not explicitly assigned numeric values they are automatically assigned incremental numerice value starting from 0.the default numerice value of first  enum constant is 0.  
+
 
