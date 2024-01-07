@@ -25,31 +25,27 @@ var Person = /** @class */ (function () {
 }());
 var student1 = new Person("saleem raza", 20);
 student1.age = 20;
-var student2 = new Person("ali abbas", 22);
-student2.age = 2;
 console.log(student1);
-console.log(student2); // this will give error because age can not negative.
+// this will give error because age can not negative.
 // example 2:
-var Employee = /** @class */ (function () {
-    function Employee() {
-    }
-    Object.defineProperty(Employee.prototype, "fullName", {
-        get: function () {
-            return "".concat(this._firstName, " ").concat(this._lastName);
-        },
-        set: function (name) {
-            var parts = name.split(' ');
-            if (parts.length != 2) {
-                throw new Error('Invalid name format: first last');
-            }
-            this._firstName = parts[0];
-            this._lastName = parts[1];
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Employee;
-}());
-var employe1 = new Employee();
-employe1.fullName = "saleem raza abbas";
-console.log(employe1.fullName);
+// class Employee {
+//     private _firstName: string;
+//     private _lastName: string;
+//     public get fullName() {
+//         return `${this._firstName} ${this._lastName}`;
+//     }
+//     public set fullName(name: string) {
+//         let parts = name.split(' ');
+//         if (parts.length != 2) {
+//             throw new Error('Invalid name format: first last');
+//         }
+//         this._firstName = parts[0];
+//         this._lastName = parts[1];
+//     }
+// }
+// let employe1= new Employee();
+// employe1.fullName="saleem raza";
+// console.log(employe1.fullName);
+// let employe2= new Employee();
+// employe2.fullName="ali abbas hussain"
+// console.log(employe1.fullName)  // this will give error

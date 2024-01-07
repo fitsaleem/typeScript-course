@@ -1,6 +1,11 @@
 # typeScript-course
 Typescript tutorial series for beginners to advance lavel
 
+
+**install ts***
+
+npm install -g typescript
+
 **why you want to learn typescript , why its better then javaScript**
 
 Typescript is a superset of JavaScript that adds static typing and advanced features to the language. It helps developers to catch potential errors during compilation. With Typescript, you can enjoy the benefits of object-oriented programming and compile-time error checking, making your code more maintainable and reliable.
