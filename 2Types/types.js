@@ -16,9 +16,18 @@ console.log(students);
 console.log(averageMarks);
 // String: Represents a sequence of characters.
 var name = "saleem";
-var nickName = "salu";
+var nickName = "saluu";
 console.log(name.toUpperCase());
 console.log(nickName.toLocaleUpperCase());
+// for only captilize first letter
+console.log(name.charAt(0).toUpperCase() + name.slice(1));
+console.log(nickName.charAt(0).toUpperCase() + nickName.substring(1));
+var months = ["January", "February", "March", "April"];
+var newArray = months.slice(1, 3);
+console.log(newArray);
+var secondNewArray = months.splice(1, 2, "may");
+console.log(secondNewArray);
+console.log(months);
 //Any: You can use this type if you are not sure what type a value will have.
 var notSure = 5;
 notSure = "maybe striung";

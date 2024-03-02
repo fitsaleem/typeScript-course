@@ -25,10 +25,24 @@ console.log(averageMarks)
 // String: Represents a sequence of characters.
 
 let name:string="saleem";
-let nickName="salu"
+let nickName="saluu"
 
 console.log(name.toUpperCase())
 console.log(nickName.toLocaleUpperCase())
+// for only captilize first letter
+console.log(name.charAt(0).toUpperCase()+ name.slice(1));
+console.log(nickName.charAt(0).toUpperCase()+nickName.substring(1));
+
+
+let months :string[] = ["January", "February", "March", "April"];
+
+let newArray = months.slice(1 , 3);
+console.log(newArray);
+
+let secondNewArray= months.splice(1,2,"may");
+console.log(secondNewArray);
+console.log(months);
+
 
 
 //Any: You can use this type if you are not sure what type a value will have.
