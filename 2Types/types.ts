@@ -5,11 +5,11 @@
 
 // Boolean: Represents a logical entity and can have two values: true and false.
 
-let isDone:boolean=true;
-let isNotDone=false;
+let isTrue:boolean= true;
+let isFalse:boolean= false
 
-console.log(isDone);
-console.log(isNotDone);
+console.log(isTrue);
+console.log(isFalse);
 
 
 // Number: Represents both integers and floating-point values.
@@ -31,7 +31,11 @@ console.log(name.toUpperCase())
 console.log(nickName.toLocaleUpperCase())
 // for only captilize first letter
 console.log(name.charAt(0).toUpperCase()+ name.slice(1));
+// slice method Purpose: The slice method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+// Syntax: array.slice(start, end)
 console.log(nickName.charAt(0).toUpperCase()+nickName.substring(1));
+// The substring method in JavaScript is used to extract a portion of a string between two specified indices and return it as a new string. The original string remains unchanged. The method can be called on any string object.
+
 
 
 let months :string[] = ["January", "February", "March", "April"];
@@ -78,11 +82,14 @@ let product2:Product={
 
 // now calculate the total price of product
 
-let totalPrice1=(product1:Product)=>{
-  return `the total price of ${product1.name} is ${product1.price*product1.quentity}`
+let  totolPrice = (product1 : Product , product2:Product)=>{
+      
+    return ("total price of products is :" + (product1.price* product1.quentity + product2.price* product2.quentity));
+
+
 }
 
-console.log(totalPrice1(product1))
+console.log(totolPrice(product1, product2));
 
 
 //Union types: Used to define a type that could be one of several types.

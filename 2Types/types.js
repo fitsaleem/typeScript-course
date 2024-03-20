@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 //1 Basic Types:
 // Boolean: Represents a logical entity and can have two values: true and false.
-var isDone = true;
-var isNotDone = false;
-console.log(isDone);
-console.log(isNotDone);
+var isTrue = true;
+var isFalse = false;
+console.log(isTrue);
+console.log(isFalse);
 // Number: Represents both integers and floating-point values.
 var age = 20;
 var students = 30;
@@ -21,7 +21,10 @@ console.log(name.toUpperCase());
 console.log(nickName.toLocaleUpperCase());
 // for only captilize first letter
 console.log(name.charAt(0).toUpperCase() + name.slice(1));
+// slice method Purpose: The slice method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+// Syntax: array.slice(start, end)
 console.log(nickName.charAt(0).toUpperCase() + nickName.substring(1));
+// The substring method in JavaScript is used to extract a portion of a string between two specified indices and return it as a new string. The original string remains unchanged. The method can be called on any string object.
 var months = ["January", "February", "March", "April"];
 var newArray = months.slice(1, 3);
 console.log(newArray);
@@ -46,10 +49,10 @@ var product2 = {
     isPaid: false,
 };
 // now calculate the total price of product
-var totalPrice1 = function (product1) {
-    return "the total price of ".concat(product1.name, " is ").concat(product1.price * product1.quentity);
+var totolPrice = function (product1, product2) {
+    return ("total price of products is :" + (product1.price * product1.quentity + product2.price * product2.quentity));
 };
-console.log(totalPrice1(product1));
+console.log(totolPrice(product1, product2));
 //Union types: Used to define a type that could be one of several types.
 // more recomanded to use union type instent of type Any.
 var a;
